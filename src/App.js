@@ -2,22 +2,43 @@
 import './App.css';
 import TestComponent from './components/TestComponent';
 
+
+let optionsObj = [
+  {
+    txt: "hola mundo",
+    correct: false
+  },
+  {
+    txt: "hola mundo",
+    correct: false
+  },
+  {
+    txt: "hola mundo",
+    correct: true
+  },
+  {
+    txt: "hola mundo",
+    correct: false
+  }
+]
+
+
 let test = {
-  options : [
-    "opcion 1",
-    "opcion 2",
-    "opcion 3",
-    "opcion 4"
-  ],
+  options : optionsObj.map(e=>e.txt),
   time : 10,
   question: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido ",
-  rightOption : 2
+  rightOption : optionsObj.indexOf(optionsObj.filter(e=>{
+    return (e.correct === true) 
+  })[0])
     
 
   
 }
 
 function App() {
+  
+
+  
   return (
     <div>
       <TestComponent test = {test}/>

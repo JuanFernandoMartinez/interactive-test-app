@@ -1,15 +1,7 @@
 import React from 'react'
 
 export default function TestComponent({test}){
-    
-    
-    
-
-
-    
-    
-
-    
+ 
     let selection = -1
     let counter = test.time
     let oob = document.getElementsByName("test-title")
@@ -22,7 +14,6 @@ export default function TestComponent({test}){
     function clearTimer(){
         clearInterval(timer)
 
-        
         let container = oob[0].parentElement
         
         
